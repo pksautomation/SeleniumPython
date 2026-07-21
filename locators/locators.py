@@ -143,3 +143,6 @@ class UserAccountLocators:
     my_profile_tab = (By.LINK_TEXT, "My profile")
     wishlist_tab = (By.LINK_TEXT, "Wishlist")
     newsletter_tab = (By.LINK_TEXT, "Newsletter")
+
+class LoginFlowLocators:
+    loginbutton = (By.XPATH,"//button[@class='btn btn-primary btn btn-block']")

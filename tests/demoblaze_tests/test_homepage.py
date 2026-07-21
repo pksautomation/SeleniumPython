@@ -3,6 +3,8 @@ import allure
 
 from pages.demoblaze.home_page import HomePage
 
+pytestmark = [pytest.mark.ui, pytest.mark.smoke]
+
 
 @pytest.mark.usefixtures("setup")
 class TestHomePage:
@@ -12,3 +14,4 @@ class TestHomePage:
         homepage = HomePage(self.driver)
         homepage.open()
         assert("STORE" in homepage.get_page_title())
+

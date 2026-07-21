@@ -27,3 +27,6 @@ class LogInPage(PageBase):
     @allure.step("Logout")
     def logout(self):
         self.driver.find_element(*LogInLocators.logout_link).click()
+
+    def loginintothesystem(self):
+        self.driver.findElement(*LogInLocators.login_link).click()
