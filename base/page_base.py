@@ -1,7 +1,9 @@
 import allure
 
+from utils.wait_helper import WaitHelper
 
-class PageBase:
+
+class PageBase(WaitHelper):
     def __init__(self, driver):
         self.driver = driver
 

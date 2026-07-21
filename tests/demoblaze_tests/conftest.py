@@ -5,6 +5,7 @@ import pytest
 from allure_commons.types import AttachmentType
 
 from utils.driver_factory import DriverFactory
+from utils.test_context import TestContext
 
 CONFIG_PATH = "config.json"
 DEFAULT_WAIT_TIME = 10
@@ -40,8 +41,8 @@ def url_setup(config):
 @pytest.fixture()
 def setup(request, config):
     driver = DriverFactory.get_driver(config)
-    driver.implicitly_wait(config["timeout"])
     request.cls.driver = driver
+    request.cls.context = TestContext()
     before_failed = request.session.testsfailed
     if config["browser"] == "firefox":
         driver.maximize_window()
