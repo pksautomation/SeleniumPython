@@ -4,8 +4,8 @@ import allure
 import pytest
 from allure_commons.types import AttachmentType
 
-from utils.driver_factory import DriverFactory
-from utils.test_context import TestContext
+from utils.ui_utils.driver_factory import DriverFactory
+from tests.common_conftest import function_context  # noqa: F401 - re-exposed as a fixture
 
 CONFIG_PATH = "config.json"
 DEFAULT_WAIT_TIME = 10
@@ -39,10 +39,10 @@ def url_setup(config):
 
 
 @pytest.fixture()
-def setup(request, config):
+def setup(request, config, function_context):
     driver = DriverFactory.get_driver(config)
     request.cls.driver = driver
-    request.cls.context = TestContext()
+    request.cls.context = function_context
     before_failed = request.session.testsfailed
     if config["browser"] == "firefox":
         driver.maximize_window()

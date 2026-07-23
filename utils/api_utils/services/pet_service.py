@@ -1,7 +1,7 @@
 import allure
 
-from api.base_service import BaseService
-from api.endpoints import PetEndpoints
+from utils.api_utils.client.base_service import BaseService
+from utils.api_utils.client.endpoints import PetEndpoints
 
 
 class PetService(BaseService):

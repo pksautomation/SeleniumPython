@@ -3,7 +3,7 @@ import allure
 
 from locators.locators import SearchResultsLocators
 from pages.phptravels.search_hotels_form import SearchHotelsForm
-from utils.read_xlsx import XlsxReader
+from utils.ui_utils.read_xlsx import XlsxReader
 
 
 @pytest.mark.usefixtures("setup")

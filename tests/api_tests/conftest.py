@@ -2,7 +2,8 @@ import json
 
 import pytest
 
-from api.api_client import ApiClient
+from utils.api_utils.client import ApiClient
+from tests.common_conftest import function_context, context, session_context  # noqa: F401 - re-exposed as fixtures
 
 CONFIG_PATH = "api_config.json"
 

@@ -2,7 +2,7 @@ import pytest
 import allure
 
 from pages.phptravels.search_flights_form import SearchFlightsForm
-from utils.read_xlsx import XlsxReader
+from utils.ui_utils.read_xlsx import XlsxReader
 
 
 @pytest.mark.usefixtures("setup")
