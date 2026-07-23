@@ -5,7 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
 
 from locators.locators import SearchTabsLocators, SearchTransferLocators
-from utils.functions import get_datestamp, click_displayed_datestamp
+from utils.ui_utils.functions import get_datestamp, click_displayed_datestamp
 
 
 class SearchTransfersForm:

@@ -1,6 +1,4 @@
-class TestContext:
-    __test__ = False  # tell pytest not to collect this as a test class (name starts with "Test")
-
+class BaseContext:
     def __init__(self):
         self._data = {}
 
@@ -27,4 +25,16 @@ class TestContext:
         return key in self._data
 
     def __repr__(self):
-        return f"TestContext({self._data!r})"
+        return f"{self.__class__.__name__}({self._data!r})"
+
+
+class FunctionContext(BaseContext):
+    """Fresh for every single test method - never shared with another test."""
+
+
+class ClassContext(BaseContext):
+    """Shared across every test method within one test class, isolated from other classes."""
+
+
+class SessionContext(BaseContext):
+    """Shared across the entire test session, across every class and file."""

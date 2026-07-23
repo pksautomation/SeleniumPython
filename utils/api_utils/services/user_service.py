@@ -1,7 +1,7 @@
 import allure
 
-from api.base_service import BaseService
-from api.endpoints import UserEndpoints
+from utils.api_utils.client.base_service import BaseService
+from utils.api_utils.client.endpoints import UserEndpoints
 
 
 class UserService(BaseService):

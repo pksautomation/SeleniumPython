@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import AttachmentType
 from locators.locators import SearchHotelsFormLocators
-from utils.functions import set_travellers_number
+from utils.ui_utils.functions import set_travellers_number
 
 
 class SearchHotelsForm:

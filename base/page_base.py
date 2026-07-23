@@ -1,6 +1,6 @@
 import allure
 
-from utils.wait_helper import WaitHelper
+from utils.ui_utils.wait_helper import WaitHelper
 
 
 class PageBase(WaitHelper):
