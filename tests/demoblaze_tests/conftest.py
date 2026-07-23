@@ -12,7 +12,6 @@ DEFAULT_WAIT_TIME = 10
 SUPPORTED_BROWSERS = ["chrome", "firefox", "edge"]
 DEFAULT_URL = "http://www.demoblaze.com/"
 
-
 @pytest.fixture(scope='session')
 def config():
     config_file = open(CONFIG_PATH)
